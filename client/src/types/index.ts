@@ -105,6 +105,55 @@ export interface PaginatedInventoryMovementResponse {
   movements: InventoryMovement[];
 }
 
+// ── Challan domain types ───────────────────────────────────────────────────
+
+export interface ChallanItem {
+  id?: string;
+  productId: string;
+  productNameSnapshot: string;
+  quantity: number;
+  unitPriceSnapshot: number;
+  totalPrice: number;
+  product?: {
+    sku?: string;
+    category?: string;
+    location?: string;
+  } | null;
+}
+
+export interface Challan {
+  id: string;
+  challanNumber: string;
+  customerId: string;
+  customer?: {
+    id: string;
+    customerName: string;
+    businessName?: string | null;
+    email?: string | null;
+    mobile?: string | null;
+    address?: string | null;
+  } | null;
+  totalQuantity: number;
+  totalPrice: number;
+  status: 'DRAFT' | 'CONFIRMED' | 'CANCELLED';
+  createdBy?: {
+    id?: string;
+    name?: string;
+    email?: string;
+  } | null;
+  createdAt: string;
+  updatedAt: string;
+  items: ChallanItem[];
+}
+
+export interface PaginatedChallanResponse {
+  total: number;
+  page: number;
+  limit: number;
+  totalPages: number;
+  challans: Challan[];
+}
+
 // ── Auth / shared types ───────────────────────────────────────────────────────
 
 export type Role = 'ADMIN' | 'SALES' | 'WAREHOUSE' | 'ACCOUNTS';

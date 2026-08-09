@@ -1220,6 +1220,150 @@ type-badge {
 .badge-wholesale { background: hsl(270, 70%, 95%); color: hsl(270, 70%, 45%); }
 .badge-distributor { background: var(--success-light); color: var(--success); }
 
+/* Challans */
+.challan-name-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.challan-number {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.challan-subtext {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.challan-customer-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.challan-customer-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.status-draft {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.status-confirmed {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-cancelled {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.challan-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.challan-section-heading h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.challan-item-row {
+  display: grid;
+  grid-template-columns: 1.4fr 0.7fr auto auto;
+  gap: 12px;
+  align-items: end;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: hsl(220, 20%, 98%);
+  margin-bottom: 10px;
+}
+
+.challan-product-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 48px;
+  justify-content: flex-end;
+}
+
+.remove-item-btn {
+  border: 1px solid var(--danger-light);
+  background: transparent;
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.remove-item-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.challan-summary-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: hsl(220, 20%, 97%);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.challan-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-main);
+}
+
+.challan-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.challan-detail-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  background: hsl(220, 20%, 97%);
+}
+
+.modal-actions-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Modals */
 .modal-overlay {
   position: fixed;
@@ -1292,6 +1436,14 @@ type-badge {
 
 @media (max-width: 600px) {
   .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .challan-item-row {
+    grid-template-columns: 1fr;
+  }
+
+  .challan-detail-grid {
     grid-template-columns: 1fr;
   }
 }
