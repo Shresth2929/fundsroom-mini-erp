@@ -46,6 +46,47 @@ https://fundsroom-mini-erp-drab.vercel.app/
 
 ---
 
+## 📸 Application Screenshots
+
+### Dashboard
+
+The dashboard provides an overview of CRM customers, active products, low-stock alerts, invoices/challans, and available portal modules.
+
+![FundsRoom ERP Dashboard](./screenshots/dashboard.png)
+
+---
+
+### Customers CRM
+
+The Customers module provides customer records with contact information, customer type, account status, follow-up information, search, filtering, and CRUD operations.
+
+![Customers CRM](./screenshots/customers.png)
+
+---
+
+### Product Catalog
+
+The Product Catalog allows users to manage products, categories, pricing, stock levels, warehouse locations, and stock status.
+
+![Product Catalog](./screenshots/products.png)
+
+---
+
+### Inventory Management
+
+The Inventory module provides current stock visibility, low-stock alerts, stock movement information, movement types, and movement history.
+
+![Inventory Management](./screenshots/inventory.png)
+
+---
+
+### Sales Challans
+
+The Sales Challans module allows authorized users to create and manage challans, review customer deliveries, and handle challan status transitions.
+
+![Sales Challans](./screenshots/challans.png)
+
+---
 ## 📋 Tech Stack
 
 | Layer | Technology |
